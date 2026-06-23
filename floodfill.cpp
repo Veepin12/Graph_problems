@@ -49,8 +49,9 @@ int main(){
     };
     int sc=1;
     int sr=1;
+    int colour = 2;
     
-    vector<vector<int>> ans = S.FloodFill(image,sr,sc,2);
+    vector<vector<int>> ans = S.FloodFill(image,sr,sc,colour);
     for(int i=0;i<image.size();i++){
         for(int j=0 ; j<image[0].size();j++){
             cout<<image[i][j]<<",";
