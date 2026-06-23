@@ -17,7 +17,7 @@ void add_edge(int src , int dist , bool bi_dir = true){
 
 void display(){
     for( int i = 0 ; i < graph.size(); i++){
-        cout<<i<<"->";
+        cout<<i<<" -> ";
         for( auto el : graph[i]){
             cout<<el <<",";
         }
