@@ -6,52 +6,45 @@ using namespace std;
 class Node{
 public:
     int val;
-    vector<Node*> neighbour;
+    vector<Node*> neighbors;
 
     Node( ){
         val = 0;
-        neighbour = vector<Node*>();
+        neighbors = vector<Node*>();
     }
     Node( int val){
         val = val;
-        neighbour = neighbour;
+        neighbors = neighbors;
     }
-    Node( int val , vector<Node * > neighbour){
+    Node( int val , vector<Node * > neighbors){
         val = val;
-        neighbour = neighbour;
+        neighbors = neighbors;
     }
 };
 
-class Solution{
+
+class Solution {
 public:
+    unordered_map<Node*, Node*> visited;
 
-    Node* cloneGraph( Node * node){
+    Node* cloneGraph(Node* node) {
+        if (!node) return nullptr;
 
-        Node * temp = new Node();
-
-        stack<Node*> st;
-        unordered_set<Node *> visited;
-        st.push(temp);
-
-        visited.insert(temp);
-
-        while( ! st.empty()){
-            Node * curr = st.top();
-            st.pop();
-            visited.insert(curr);
-
-            for( auto neighbour : * node.(curr)){
-                if( visited.count(neighbour)){
-                    st.push(neighbour);
-                    visited.insert(neighbour);
-
-                }
-            }
+        if (visited.count(node)) {
+            return visited[node];   // already cloned -> avoid infinite loop
         }
-        return 
 
+        Node* cloneNode = new Node(node->val);
+        visited[node] = cloneNode;          // map BEFORE recursing (critical for cycles)
+
+        for (Node* neighbor : node->neighbors) {
+            cloneNode->neighbors.push_back(cloneGraph(neighbor));
+        }
+
+        return cloneNode;
     }
 };
 int main(){
+    
     return 0;
 }
