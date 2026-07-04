@@ -41,15 +41,7 @@ int connected_component(){
     }
     return res;
 }
-void display(){
-    for( int i = 0 ; i < graph.size(); i++){
-        cout<<i<<" -> ";
-        for( auto & el: graph[i]){
-            cout<< el;
-        }
-        cout<<"\n";
-    }
-}
+
 
 int main(){
     cin>>v;
@@ -59,11 +51,11 @@ int main(){
     while( e--){
         int src , dest;
         cin>>src>>dest;
-        add_edge( src , dest);
+        add_edge( src , dest, false);
 
 
     }
-    display();
+
     cout<<connected_component();
 
     return 0;
