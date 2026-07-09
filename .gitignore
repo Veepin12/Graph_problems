@@ -1,0 +1,33 @@
+# Compile-time files and binaries
+*.o
+*.out
+*.exe
+*.app
+*.dSYM/
+
+# Ignored binary executables (Mac/Linux compiled files with no extension)
+BFS_shortest_path
+ColoringBordar
+DFS
+NumberOfIsland
+Rooting_Orange
+adjecency_list
+all_path
+center_node
+connected_component
+flood
+floodfill
+key_and_room
+referrel
+repalce_zero_with_1
+unweighted_adjecency_set
+weighted_adjecency_list
+weighted_adjecency_map
+
+# IDEs and editors
+.vscode/
+*.code-workspace
+.DS_Store
+.idea/
+*.swp
+*.swo
