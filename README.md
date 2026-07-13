@@ -35,6 +35,7 @@ Graph_problems/
     ├── flood.cpp                     # Alternate implementation of grid coloring
     ├── ColoringBordar.cpp            # Connected component border coloring (LeetCode 1034)
     ├── repalce_zero_with_1.cpp       # Boundary-connected component protection & replacement
+    ├── chess_board_dist.cpp          # Minimum moves of a knight on infinite board (LeetCode 1197)
     └── seminar.cpp                   # Interval scheduling / meeting room overlapping logic
 ```
 
@@ -68,6 +69,7 @@ Below is a detailed map of the implementations included in this repository.
 | [flood.cpp](file:///Users/veepinchaudhary8115/Documents/GitHub/Graph_problems/flood.cpp) | Area Coloring | Flood Fill variant for coordinate coloring. | [LeetCode 733](https://leetcode.com/problems/flood-fill/) | $O(R \cdot C)$ | $O(R \cdot C)$ |
 | [ColoringBordar.cpp](file:///Users/veepinchaudhary8115/Documents/GitHub/Graph_problems/ColoringBordar.cpp) | Component Border | Color only the outer boundary of a connected grid component. | [LeetCode 1034](https://leetcode.com/problems/coloring-a-border/) | $O(R \cdot C)$ | $O(R \cdot C)$ |
 | [repalce_zero_with_1.cpp](file:///Users/veepinchaudhary8115/Documents/GitHub/Graph_problems/repalce_zero_with_1.cpp) | Multi-Source Grid BFS | Captures and fills surrounded components starting from boundaries. | [LeetCode 130](https://leetcode.com/problems/surrounded-regions/) | $O(R \cdot C)$ | $O(R \cdot C)$ |
+| [chess_board_dist.cpp](file:///Users/veepinchaudhary8115/Documents/GitHub/Graph_problems/chess_board_dist.cpp) | BFS on Grid | Finding the minimum moves of a knight from (0,0) to (x,y). | [LeetCode 1197](https://leetcode.com/problems/minimum-knight-moves/) | $O(|x| \cdot |y|)$ | $O(|x| \cdot |y|)$ |
 | [seminar.cpp](file:///Users/veepinchaudhary8115/Documents/GitHub/Graph_problems/seminar.cpp) | Greedy / Intervals | Sorting and checking for scheduling overlaps in 1D matrix intervals. | [LeetCode 252](https://leetcode.com/problems/meeting-rooms/) | $O(N \log N)$ | $O(1)$ |
 
 ---
