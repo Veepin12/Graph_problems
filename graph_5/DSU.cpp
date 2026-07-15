@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+// time Complexity = O( log n)
+
+
 int get( vector<int> & parent , int x){
 
     return parent[x] = parent[x] == x ? x : get( parent, parent[x]);
