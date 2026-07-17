@@ -58,6 +58,7 @@ int  main(){
             cin>>x>>y;
             bool ans = Union(parent , rank , x , y);
             if( ans == true) cout<<"cycle detected"<<"\n";
+            
        
         
     }
