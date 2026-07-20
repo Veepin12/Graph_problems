@@ -55,7 +55,7 @@ public:
 
             auto curr = nums[edgeCount];
 
-            int src =curr[0];
+            int src = curr[0];
 
             int dest = curr[1];
 
