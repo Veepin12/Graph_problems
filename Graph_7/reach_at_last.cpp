@@ -11,7 +11,7 @@ using namespace std;
 
 // Time Complexity = T(n) = O(log(n + m)).
 
-// check that if reach the last position on a grid from ( 0 , 0) with space complexity in O(1)..
+// check that if reach the last position on a grid from ( 0 , 0) to ( n -1 , m - 1) with space complexity in O(1)..
 
 class Solution{
 public:
@@ -39,9 +39,18 @@ public:
 int main(){
     
     Solution S;
+    int n , m;
+    cin>>n>>m;
+
+    vector<vector<char>> grid( n , vector<char> (  m ));
+
+    for( int i = 0; i < n; i++){
+        for( int j = 0; j < m; j++){
+            cin>>grid[i][j];
+        }
+    }
     
     
-    vector<vector<char>> grid = {{'d' , 'r' , 'd' , 'r' },{'r' ,'u' ,'r' ,'r' }};
     cout<<S.reach(grid)<<endl;
     return 0;
 }

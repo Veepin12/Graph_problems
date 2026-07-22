@@ -42,6 +42,12 @@ int connected_component(){
     return res;
 }
 
+int stone_remove(int n){
+
+    int cc = connected_component();
+    return n - cc;
+}
+
 
 int main(){
     cin>>v;
@@ -56,7 +62,9 @@ int main(){
 
     }
 
-    cout<<connected_component();
+    cout<<stone_remove(e)<<endl;
+
+   
 
     return 0;
 }
