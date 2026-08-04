@@ -11,6 +11,8 @@
 #include <queue>
 #include <unordered_set>
 #include <vector>
+#include <climits>
+
 #define ll long long int
 #define pp pair<int , int >
 using namespace std;
@@ -41,29 +43,29 @@ unordered_map< int , int> dijkestr( int src , int n){
     pq.push({ 0 , src});
     mp[src] = 0;
    
-   
     
     while( !pq.empty()){
         pp curr = pq.top();
-        if( vis.count( curr.second)){
-            pq.pop();
+        pq.pop();
+        
+        int node = curr.second;
+        
+        if( vis.count(node)){
             continue;
         }
         
-        vis.insert(curr.second);
-       
-        pq.pop();
+        vis.insert(node);
         
-        for ( auto neighbour : graph[curr.second]){
-            if( !vis.count(neighbour.first) && mp[neighbour.first] > mp[curr.second] + neighbour.second){
-                pq.push({neighbour.second , neighbour.first});
-                via[neighbour.first] = neighbour.second;
-                mp[neighbour.first] = neighbour.second;
+        for ( auto neighbour : graph[node]){
+            int nbr = neighbour.first;
+            int wt = neighbour.second;
+            if( !vis.count(nbr) && mp[nbr] > mp[node] + wt){
+                mp[nbr] = mp[node] + wt;
+                via[nbr] = node;
+                pq.push({mp[nbr] , nbr});
             }
         }
     }
-    
-    
     
     return mp;
     
